@@ -71,8 +71,8 @@
     <meta property="og:image" content="{{ printf "img/favicon/%s.png" $.Site.Params.ThemeColor | absURL }}">
   {{ end }}
 {{ end }}
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="627">
+<meta property="og:image:width" content="{{ .Params.cover_width | default "1200" }}">
+<meta property="og:image:height" content="{{ .Params.cover_height | default "630" }}">
 {{ range .Params.categories }}
   <meta property="article:section" content="{{ . }}" />
 {{ end }}
