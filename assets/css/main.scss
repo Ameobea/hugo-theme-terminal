@@ -342,5 +342,86 @@ hr {
 }
 
 sup {
- line-height: 0;
+  line-height: 0;
+}
+
+// note boxes ported over from main gatsby blog
+.good,
+.bad,
+.warning,
+.warn,
+.note,
+.info {
+  display: block;
+  margin: 30px 0;
+  padding: 15px 20px;
+  border-style: solid;
+  border-width: 0;
+  border-left-width: 2px;
+  font-size: .95rem;
+
+  @media ($phone) {
+    font-size: .9rem;
+    padding: 12px 15px;
+  }
+
+  code {
+    padding: 1px 4px;
+  }
+
+  *:first-child {
+    margin-top: 0;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.good {
+  background-color: transparentize(#78E2A0, .85);
+  border-color: #78E2A0;
+
+  code {
+    background-color: transparentize(#78E2A0, .7);
+  }
+}
+
+.bad {
+  background-color: transparentize(#E27878, .85);
+  border-color: #E27878;
+
+  code {
+    background-color: transparentize(#E27878, .7);
+  }
+}
+
+.warning,
+.warn {
+  background-color: transparentize(#E2C078, .85);
+  border-color: #E2C078;
+
+  code {
+    background-color: transparentize(#E2C078, .7);
+  }
+}
+
+.note,
+.info {
+  background-color: transparentize(#78C8E2, .85);
+  border-color: #78C8E2;
+
+  code {
+    background-color: transparentize(#78C8E2, .7);
+  }
+}
+
+.good.padded,
+.bad.padded,
+.warning.padded,
+.warn.padded,
+.note.padded,
+.info.padded {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
